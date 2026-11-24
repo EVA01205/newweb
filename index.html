@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>知行共创 CoLab · 校园真实需求共创平台 V1.0</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- ============ 桌面端侧边导航（移动端隐藏） ============ -->
+  <aside class="sidenav" id="sidenav"></aside>
+
+  <div class="body">
+    <!-- ============ 移动端顶部栏（桌面端隐藏） ============ -->
+    <header class="appbar" id="appbar"></header>
+
+    <main class="content" id="main">
+      <div class="page" id="page"></div>
+    </main>
+  </div>
+
+  <!-- ============ 移动端底部标签栏（桌面端隐藏） ============ -->
+  <nav class="tabbar" id="tabbar"></nav>
+</div>
+
+<!-- ============ 抽屉 / 弹窗 ============ -->
+<div class="mask" id="mask" onclick="A.maskClick(event)">
+  <div class="sheet" id="sheet" onclick="event.stopPropagation()">
+    <div class="hd"><div class="t" id="sheetTitle">标题</div>
+      <div class="x" onclick="A.closeSheet()">×</div></div>
+    <div class="bd" id="sheetBody"></div>
+    <div class="ft" id="sheetFoot"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
